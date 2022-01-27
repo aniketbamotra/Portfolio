@@ -37,12 +37,21 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url(/static/media/marjan-blan-marjanblan-_kUxT8WkoeY-unsplash\ 1.png);
+    /* background-image: url(/static/media/marjan-blan-marjanblan-_kUxT8WkoeY-unsplash\ 1.png); */
     background-size: 50% 50%;
     background-repeat: repeat;
     padding: 1px;
     overflow-x: hidden;
     min-height: 100vh;
+}
+#bg{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(/static/media/marjan-blan-marjanblan-_kUxT8WkoeY-unsplash\ 1.png);
+    position: fixed;
+    background-size: 100% 80%;
+    background-repeat: repeat;
+    z-index: -10;
 }
 header{
     display: block;
@@ -67,8 +76,10 @@ header{
 }
 .flt-email{
     position: fixed;
-    transform: rotate(270deg) translateY(-350%) translateX(-110%);
+    transform: rotate(270deg) translateY(-230%) translateX(-150%);
     font-size: 3ch;
+    text-decoration: none;
+    color: rgb(var(--d-color));
 
 }
 .body-container{
