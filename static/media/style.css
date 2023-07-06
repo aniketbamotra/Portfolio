@@ -36,15 +36,18 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  /* background-image: url(/static/media/marjan-blan-marjanblan-_kUxT8WkoeY-unsplash\ 1.png); */
+body{
+  overflow-x: hidden;
+}
+/* body {
+  background-image: url(/static/media/marjan-blan-marjanblan-_kUxT8WkoeY-unsplash\ 1.png);
   background-size: 50% 50%;
   background-repeat: repeat;
   padding: 1px;
   overflow-x: hidden;
   min-height: 100vh;
-}
-#bg {
+} */
+/* #bg {
   height: 100vh;
   width: 100vw;
   background-image: url(/static/media/bg-img.jpg);
@@ -52,28 +55,21 @@ body {
   background-size: 100% 80%;
   background-repeat: repeat;
   z-index: -10;
-}
+} */
 header {
-  display: block;
-  padding: 2rem;
-  position: sticky;
-  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
 }
 #logo {
   width: 5rem;
   height: auto;
 }
-.menu-wrap {
-  position: relative;
-  top: -2rem;
+/* .menu-wrap {
   width: 7rem;
-  left: 90vw;
   height: 1.5rem;
-}
-#menu {
-  position: relative;
-  float: right;
-}
+} */
 #menu #l-line {
   transition: 0.3s ease;
 }
@@ -83,7 +79,7 @@ header {
 .menu-wrap ul {
   list-style: none;
   padding-top: 4rem;
-  transform: translateX(10rem);
+  transform: translateX(20rem);
   transition: 0.5s ease;
 }
 .menu-wrap li {
@@ -113,36 +109,53 @@ header {
 }
 .body-container {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(10, minmax(1, 10rem));
-  padding: 0rem 8rem;
-  grid-gap: 5rem;
+  grid-template-columns: repeat(12, 1fr);
 }
-#im {
-  grid-area: 1/1/2/11;
-  z-index: 10;
+.im {
+  grid-column: 5/11;
+  position: relative;
   line-height: 100px;
-  padding: 0rem 0rem 5rem 10rem;
   color: rgb(var(--d-color));
+  z-index: 2;
 }
-#im h3 {
+.im h3 {
   font-size: 9ch;
 }
-#im h1 {
+.im h1 {
   font-size: 15.8ch;
   font-family: var(--font-b);
 }
-#dp {
-  grid-area: 2/5/4/11;
-  width: 53.3rem;
-  height: 1090px;
+.intro-img{
+  grid-column: 6/11;
 }
-#bio-para {
-  grid-area: 4/1/6/9;
+.intro-text{
+  grid-column: 2/11;
+}
+.bio-para {
   font-size: 12ch;
-  padding: 5rem 0rem 1rem 4rem;
   color: rgb(var(--d-color), 0.7);
 }
+
+@media (max-width: 1023px) {
+  .body-container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+  }
+  .im{
+    grid-column: 3/8;
+  }
+  .im h3{
+    font-size: 6ch;
+  }
+  .im h1{
+    font-size: 12ch;
+  }
+  .intro-img{
+    width: 60vw;
+    height: auto;
+  }
+}
+
 #work-sec-title {
   grid-area: 6/1/8/11;
   text-align: right;
