@@ -38,6 +38,7 @@
 }
 body{
   overflow-x: hidden;
+  min-width: 100vw;
 }
 /* body {
   background-image: url(/static/media/marjan-blan-marjanblan-_kUxT8WkoeY-unsplash\ 1.png);
@@ -62,10 +63,10 @@ header {
   align-items: center;
   padding: 1.5rem 3rem;
 }
-#logo {
+/* #logo {
   width: 5rem;
   height: auto;
-}
+} */
 /* .menu-wrap {
   width: 7rem;
   height: 1.5rem;
@@ -79,8 +80,10 @@ header {
 .menu-wrap ul {
   list-style: none;
   padding-top: 4rem;
-  transform: translateX(20rem);
+  transform: translateX(8rem);
+  visibility: collapse;
   transition: 0.5s ease;
+  position: absolute;
 }
 .menu-wrap li {
   border-bottom: none;
@@ -99,6 +102,7 @@ header {
 }
 .menu-wrap:hover ul {
   transform: translateX(0rem);
+  visibility: visible;
 }
 .flt-email {
   position: fixed;
@@ -127,6 +131,7 @@ header {
 }
 .intro-img{
   grid-column: 6/11;
+  margin-bottom: 1rem;
 }
 .intro-text{
   grid-column: 2/11;
@@ -137,23 +142,82 @@ header {
 }
 
 @media (max-width: 1023px) {
+  #logo{
+    width: 4rem;
+  }
+  .menu-wrap svg{
+    width: 4rem;
+  }
+  .flt-email{
+    font-size: 2ch;
+  }
   .body-container {
-    display: grid;
     grid-template-columns: repeat(8, 1fr);
   }
   .im{
-    grid-column: 3/8;
+    grid-column: 3/7;
+    line-height: 70px;
   }
   .im h3{
     font-size: 6ch;
   }
   .im h1{
-    font-size: 12ch;
+    font-size: 10ch;
   }
   .intro-img{
-    width: 60vw;
+    width: 50vw;
     height: auto;
+    grid-column: 4/8;
   }
+  .intro-text{
+    grid-column: 2/8;
+  }
+  .bio-para{
+    font-size: 6ch;
+  }
+}
+@media (max-width: 768px) {
+  header{
+    padding: 1.5rem 1.5rem;
+  }
+  #logo {
+      width: 3rem;
+  }
+    .menu-wrap svg {
+      width: 3rem;
+    }
+  .body-container {
+      grid-template-columns: repeat(4, 1fr);
+      padding: 0rem 1.5rem;
+    }
+  
+    .im {
+      grid-column: 2/4;
+      line-height: 40px;
+    }
+  
+    .im h3 {
+      font-size: 3ch;
+    }
+  
+    .im h1 {
+      font-size: 6ch;
+    }
+  
+    .intro-img {
+      width: 60vw;
+      height: auto;
+      grid-column: 2/4;
+    }
+  
+    .intro-text {
+      grid-column: 2/5;
+    }
+  
+    .bio-para {
+      font-size: 3ch;
+    }
+  
 }
 
 #work-sec-title {
