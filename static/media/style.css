@@ -58,6 +58,7 @@ body{
   z-index: -10;
 } */
 header {
+  overflow-x: hidden;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -101,8 +102,8 @@ header {
     border-bottom: 1px solid;
 }
 .menu-wrap:hover ul {
-  transform: translateX(0rem);
-  visibility: visible;
+  transform: translateX(-1rem);
+  visibility:visible;
 }
 .flt-email {
   position: fixed;
@@ -142,6 +143,9 @@ header {
 }
 
 @media (max-width: 1023px) {
+  header{
+    overflow-x: hidden;
+  }
   #logo{
     width: 4rem;
   }
@@ -186,13 +190,15 @@ header {
     .menu-wrap svg {
       width: 3rem;
     }
-  .body-container {
-      grid-template-columns: repeat(4, 1fr);
-      padding: 0rem 1.5rem;
+    .menu-wrap ul{
+      padding-top: 1rem;
     }
-  
+    .menu-wrap li{
+      font-size: 2ch;
+      line-height: 30px;
+    }
     .im {
-      grid-column: 2/4;
+      grid-column: 2/7;
       line-height: 40px;
     }
   
@@ -207,11 +213,11 @@ header {
     .intro-img {
       width: 60vw;
       height: auto;
-      grid-column: 2/4;
+      grid-column: 2/8;
     }
   
     .intro-text {
-      grid-column: 2/5;
+      grid-column: 2/8;
     }
   
     .bio-para {
