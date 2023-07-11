@@ -81,8 +81,7 @@ header {
 .menu-wrap ul {
   list-style: none;
   padding-top: 4rem;
-  transform: translateX(8rem);
-  visibility: collapse;
+  width: 20rem;
   transition: 0.5s ease;
   position: absolute;
 }
@@ -102,8 +101,7 @@ header {
     border-bottom: 1px solid;
 }
 .menu-wrap:hover ul {
-  transform: translateX(-1rem);
-  visibility:visible;
+  width: 0rem;
 }
 .flt-email {
   position: fixed;
@@ -136,6 +134,7 @@ header {
 }
 .intro-text{
   grid-column: 2/11;
+  margin-bottom: 15rem;
 }
 .bio-para {
   font-size: 12ch;
@@ -225,47 +224,24 @@ header {
     }
   
 }
-
+/* Project section title */
+.projects{
+  grid-column: 2/13;
+}
 #work-sec-title {
-  grid-area: 6/1/8/11;
-  text-align: right;
-  font-size: 12ch;
+  grid-column: 2/9;
+  text-align: center;
+  font-size: 25ch;
   font-family: var(--font-b);
-  padding: 5rem 3rem 3rem 0rem;
+  margin-bottom: 10rem;
 }
-#proj1 img,
-#proj2 img,
-#proj3 img {
-  width: 1039px;
-  height: 584px;
+.proj-container img{
+  width: 50vw;
+  height: auto;
+  border-radius: 15px;
 }
-#proj1 p,
-#proj2 p,
-#proj3 p {
-  font-size: 4.5ch;
-  padding-left: 1.5rem;
-}
-#proj1 {
-  grid-area: 8/1/10/7;
-  padding: 5rem 0rem 5rem 3rem;
-}
-.proj-wrap {
-  border: 2px solid;
-  width: fit-content;
-  padding: 1rem;
-}
-#proj2 {
-  grid-area: 10/4/12/10;
-  padding: 0rem 5rem 5rem 0rem;
-}
-#ri-text {
-  text-align: right;
-  transform: translate(12rem, 0rem);
-}
-#proj3 {
-  grid-area: 12/1/14/7;
-  padding: 0rem 0rem 5rem 3rem;
-}
+
+
 #contact-title {
   grid-area: 14/1/16/11;
   place-self: center;
