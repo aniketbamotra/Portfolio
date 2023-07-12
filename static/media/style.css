@@ -228,6 +228,7 @@ header {
 .projects{
   grid-column: 2/13;
   margin-bottom: 3rem;
+  min-height: 60rem;
 }
 #work-sec-title {
   grid-column: 2/9;
@@ -257,6 +258,7 @@ header {
 }
 .proj-imgs{
   position: relative;
+  flex: 1 1 0;
   width: 100%;
   height: 100%;
   margin-bottom: 20px;
@@ -303,6 +305,7 @@ header {
   height: 36px;
   overflow: hidden;
 }
+
 .song-info {
   width: calc(100% - 32px);
   display: block;
@@ -320,10 +323,18 @@ header {
   width: 100%;
 }
 
-.subtitle {
+.subtitle, .time {
   font-size: 12px;
   line-height: 16px;
   color: #c6c5c6;
+}
+
+.time {
+  font-size: 12px;
+  line-height: 16px;
+  color: #a5a5a5;
+  font-weight: 500;
+  margin-left: auto;
 }
 
 #contact-title {
@@ -358,4 +369,5 @@ footer {
   font-size: 4.5ch;
   color: rgb(var(--d-color));
   padding: 1rem;
+  margin-top: 8rem;
 }
