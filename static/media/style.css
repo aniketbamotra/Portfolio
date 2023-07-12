@@ -320,7 +320,7 @@ header {
   width: 100%;
 }
 
-.subtitle, .time {
+.subtitle {
   font-size: 12px;
   line-height: 16px;
   color: #c6c5c6;
